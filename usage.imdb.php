@@ -34,6 +34,9 @@ echo '<br>';
 echo '<b>MPAA Rating : </b>';
 echo $data->_getMovieMPAARating();
 echo '<br>';
+echo '<b>Genre : </b>';
+echo $data->_getMovieGenre();
+echo '<br>';
 echo '<b>Poster : </b><br>';
 echo '<img src="'.$data->_getMovieBigPoster().'">';
 

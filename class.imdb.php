@@ -144,7 +144,7 @@ class IMDB
      */
     public function _getMovieDirector()
     {
-        return $this->_preg_match('/Director:\s*<\/h4>\s*<a\s*onclick="\(new Image\(\)\)\.src=\'\/rg\/title\-overview\/director\-1\/images\/b\.gif\?link=%2Fname%2Fnm[0-9]*%2F\';"\s*href="\/name\/[a-z0-9]*\/"\s*itemprop="director"\s*>(.+?)<\/a>/s');
+        return $this->_preg_match('/Director:\s*<\/h4>\s*<a\s*onclick="[\x0-\x7A]*"\s*href="\/name\/[a-z0-9]*\/"\s*itemprop="director"\s*>(.+?)<\/a>/s');
     }
     
     /**
@@ -169,6 +169,17 @@ class IMDB
         $largeImagedata = $this->_getSiteContent($largeImageLink);
         return $this->_preg_match('/<img id="primary-img" itemprop="contentURL" title="[\x0-\x7A]*" alt="[\x0-\x7A]*"  src="(.+?)"  data-rmconst="[\x0-\x7A]*"  onmousedown="return false\;" onmousemove="return false\;" oncontextmenu="return false\;" \/>/s', $largeImagedata);
     }
+    /**
+     * Get Movie Genre
+     *
+     * @return array
+     */
+    public function _getMovieGenre()
+    {
+        preg_match_all('~href="/genre/(.*)"~Ui',$this->imdbSitedata,$hit);
+		return implode('&nbsp;|&nbsp;',array_unique($hit[1]));
+		//print_r($hit);
+    }	
 }
 
 ?>
