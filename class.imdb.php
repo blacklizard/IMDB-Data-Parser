@@ -128,8 +128,14 @@ class IMDB
      */
     public function _getMoviePlot()
     {
-        return $this->_preg_match('/Storyline<\/h2>\s*<p>(.+?)<em class="nobr">/s');
-    }
+        $plotData = $this->_preg_match('/Storyline<\/h2>\s*<p>(.+?)<em class="nobr">/s');
+		if($plotData == 'Data not available'){
+			return $this->_preg_match('/Storyline<\/h2>\s*<p>(.+?)<\/p>/s');
+		}
+		else{
+			return $plotData;
+		}
+	}
     
     /**
      * Get Movie director
