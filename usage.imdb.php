@@ -37,6 +37,9 @@ echo '<br>';
 echo '<b>Genre : </b>';
 echo $data->_getMovieGenre();
 echo '<br>';
+echo '<b>Actor : </b>';
+echo $data->_getMovieActor();
+echo '<br>';
 echo '<b>Poster : </b><br>';
 echo '<img src="'.$data->_getMovieBigPoster().'">';
 

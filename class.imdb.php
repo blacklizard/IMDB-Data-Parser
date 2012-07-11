@@ -144,7 +144,7 @@ class IMDB
      */
     public function _getMovieDirector()
     {
-        return $this->_preg_match('/Director:\s*<\/h4>\s*<a\s*onclick="[\x0-\x7A]*"\s*href="\/name\/[a-z0-9]*\/"\s*itemprop="director"\s*>(.+?)<\/a>/s');
+        return $this->_preg_match('/Director:\s*<\/h4>\s*<a\s*onclick="(?:.*)"\s*href="\/name\/[a-z0-9]*\/"\s*itemprop="director"\s*>(.+?)<\/a>/s');
     }
     
     /**
@@ -172,14 +172,24 @@ class IMDB
     /**
      * Get Movie Genre
      *
-     * @return array
+     * @return string
      */
     public function _getMovieGenre()
     {
-        preg_match_all('~href="/genre/(.*)"~Ui',$this->imdbSitedata,$hit);
+        preg_match_all('#href="/genre/(.*)"#Ui',$this->imdbSitedata,$hit);
 		return implode('&nbsp;|&nbsp;',array_unique($hit[1]));
-		//print_r($hit);
-    }	
+    }
+	
+    /**
+     * Get Movie Actors
+     *
+     * @return string
+     */
+    public function _getMovieActor()
+    {
+        preg_match_all('#<td class="name">\s*<a\s*onclick="(?:.*)"\s*href="/name/nm(\d*)/"\s*>(.*)</a>\s*</td>#Ui',$this->imdbSitedata,$hit);
+		return implode('&nbsp;|&nbsp;',array_unique($hit[2]));
+    }		
 }
 
 ?>
