@@ -96,7 +96,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieTitle()
+    public function getMovieTitle()
     {
         return $this->_preg_match('/<h1 class="header" itemprop="name">(.+?)<span/s');
     }
@@ -106,7 +106,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieYear()
+    public function getMovieYear()
     {
         return $this->_preg_match('/<span class="nobr">\(<a href="\/year\/[0-9]*\/">(.+?)<\/a>\)<\/span>/s');
     }
@@ -116,7 +116,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieRating()
+    public function getMovieRating()
     {
         return $this->_preg_match('/<span itemprop="ratingValue">(.+?)<\/span>/s');
     }
@@ -126,7 +126,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMoviePlot()
+    public function getMoviePlot()
     {
         $plotData = $this->_preg_match('/Storyline<\/h2>\s*<p>(.+?)<em class="nobr">/s');
 		if($plotData == 'Data not available'){
@@ -142,7 +142,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieDirector()
+    public function getMovieDirector()
     {
         return $this->_preg_match('/Director:\s*<\/h4>\s*<a\s*onclick="(?:.*)"\s*href="\/name\/[a-z0-9]*\/"\s*itemprop="director"\s*>(.+?)<\/a>/s');
     }
@@ -152,7 +152,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieMPAARating()
+    public function getMovieMPAARating()
     {
         return $this->_preg_match('/<div class="infobar">\s*<img width="18" alt="R" src="[\x0-\x7A]*" class="absmiddle" title="(.*?)" height="15">/s');
     }
@@ -162,7 +162,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieBigPoster()
+    public function getMovieBigPoster()
     {
         $imageLink      = $this->_preg_match('/<td rowspan="2" id="img_primary">\s*<a\s*onclick="\(new Image\(\)\)\.src=\'\/rg\/title\-overview\/primary\/images\/b.gif\?link=%2Fmedia%2Frm[0-9]*%2Ftt[0-9]*\'\;"\s*href="(.+?)"\s*><img src="/s');
         $largeImageLink = 'http://www.imdb.com' . $imageLink;
@@ -174,7 +174,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieGenre()
+    public function getMovieGenre()
     {
         preg_match_all('#href="/genre/(.*)"#Ui',$this->imdbSitedata,$hit);
 		return implode('&nbsp;|&nbsp;',array_unique($hit[1]));
@@ -185,7 +185,7 @@ class IMDB
      *
      * @return string
      */
-    public function _getMovieActor()
+    public function getMovieActor()
     {
         preg_match_all('#<td class="name">\s*<a\s*onclick="(?:.*)"\s*href="/name/nm(\d*)/"\s*>(.*)</a>\s*</td>#Ui',$this->imdbSitedata,$hit);
 		return implode('&nbsp;|&nbsp;',array_unique($hit[2]));
