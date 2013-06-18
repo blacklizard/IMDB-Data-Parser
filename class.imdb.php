@@ -1,18 +1,19 @@
 <?php
 /**
- * IMDB information parser
+ * PHP IMDB information parser/scraper
  *
  * Provides an api for retrieving movie information from IMDB
  *
  * PHP 5 with CURL
  *
- * Copyright 2011-2012, blacklizard(https://www.facebook.com/icodewithlizard)
+ * Copyright 2011-2013, blacklizard(https://www.facebook.com/icodewithlizard)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2011-2012, blacklizard(https://www.facebook.com/icodewithlizard)
+ * @copyright     Copyright 2011-2013, blacklizard(https://www.facebook.com/icodewithlizard)
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @version       1.0.1 (19th June 2013)
  */
 
 class IMDB
@@ -79,6 +80,7 @@ class IMDB
                     $source = $this->imdbSitedata;
                 }
                 if (preg_match($pattern, $source, $hit)) {
+                    var_dump($hit);
                     return $hit[1];
                 } else {
                     return 'Data not available';
@@ -98,7 +100,7 @@ class IMDB
      */
     public function getMovieTitle()
     {
-        return $this->_preg_match('/<h1 class="header" itemprop="name">(.+?)<span/s');
+        return $this->_preg_match('/<span class="itemprop" itemprop="name">(.+?)<\/span>/s');
     }
     
     /**
@@ -108,7 +110,7 @@ class IMDB
      */
     public function getMovieYear()
     {
-        return $this->_preg_match('/<span class="nobr">\(<a href="\/year\/[0-9]*\/">(.+?)<\/a>\)<\/span>/s');
+        return $this->_preg_match('/href="\/year\/(.+?)\/\?/s');
     }
     
     /**
@@ -128,24 +130,8 @@ class IMDB
      */
     public function getMoviePlot()
     {
-        $plotData = $this->_preg_match('/Storyline<\/h2>\s*<p>(.+?)<em class="nobr">/s');
-		if($plotData == 'Data not available'){
-			return $this->_preg_match('/Storyline<\/h2>\s*<p>(.+?)<\/p>/s');
-		}
-		else{
-			return $plotData;
-		}
+        return trim ( $this->_preg_match('/<div class="inline canwrap" itemprop="description">\s+<p>(.+?)<em/s') );
 	}
-    
-    /**
-     * Get Movie director
-     *
-     * @return string
-     */
-    public function getMovieDirector()
-    {
-        return $this->_preg_match('/Director:\s*<\/h4>\s*<a\s*onclick="(?:.*)"\s*href="\/name\/[a-z0-9]*\/"\s*itemprop="director"\s*>(.+?)<\/a>/s');
-    }
     
     /**
      * Get Movie MPAA Rating
@@ -154,7 +140,18 @@ class IMDB
      */
     public function getMovieMPAARating()
     {
-        return $this->_preg_match('/<div class="infobar">\s*<img width="18" alt="R" src="[\x0-\x7A]*" class="absmiddle" title="(.*?)" height="15">/s');
+        return $this->_preg_match('/<span itemprop="contentRating">(.+?)<\/span>/s');
+    }
+
+    /**
+     * Get Movie director
+     *
+     * @return string
+     */
+    public function getMovieDirector()
+    {
+        return $this->_preg_match('/(?:Director|Directors):<\/h4>(.*)<\/div>/sU');
+
     }
     
     /**
@@ -169,6 +166,7 @@ class IMDB
         $largeImagedata = $this->_getSiteContent($largeImageLink);
         return $this->_preg_match('/<img id="primary-img" itemprop="contentURL" title="[\x0-\x7A]*" alt="[\x0-\x7A]*"  src="(.+?)"  data-rmconst="[\x0-\x7A]*"  onmousedown="return false\;" onmousemove="return false\;" oncontextmenu="return false\;" \/>/s', $largeImagedata);
     }
+
     /**
      * Get Movie Genre
      *
@@ -176,8 +174,7 @@ class IMDB
      */
     public function getMovieGenre()
     {
-        preg_match_all('#href="/genre/(.*)"#Ui',$this->imdbSitedata,$hit);
-		return implode('&nbsp;|&nbsp;',array_unique($hit[1]));
+        return $this->_preg_match('/(?:Genres|Genre):<\/h4>(.+?)<\/div>/s');
     }
 	
     /**

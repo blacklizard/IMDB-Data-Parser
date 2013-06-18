@@ -15,6 +15,7 @@
  
 require ("class.imdb.php");
 
+//$data = new IMDB('http://localhost/sample.txt');
 $data = new IMDB('http://www.imdb.com/title/tt0111161/');
 echo '<b>Title : </b>';
 echo $data->getMovieTitle();
