@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class IMDB | PHP IMDB / IMDB.com information parser/scraper</title>
+
+	<script type="text/javascript" src="resources/combined.js?1198375542"></script>
+	<script type="text/javascript" src="elementlist.js?386969997"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-IMDB.html">IMDB</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class IMDB</h1>
+
+
+	<div class="description">
+	
+<p>PHP IMDB / IMDB.com information parser/scraper</p>
+
+<p>Provides an api to retrieve movie information from IMDB.com via Web
+scraping</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+				<b>License:</b>
+				<a href="Creative">Commons Attribution-NonCommercial-ShareAlike 3.0 Unported</a><br />
+				<b>Author:</b>
+				blacklizard (<a
+href="https://www.facebook.com/icodewithlizard">https://www.facebook.com/icodewithlizard</a>)<br />
+				<b>Version:</b>
+				2.0.0 (22nd June 2013)<br />
+				<b>Link:</b>
+				<a href="https://github.com/blacklizard/IMDB-Data-Parser">https://github.com/blacklizard/IMDB-Data-Parser</a><br />
+				<b>Website:</b>
+				<a href="http://www.icodewithlizard.com/">http://www.icodewithlizard.com/</a><br />
+		<b>Located at</b> <a href="source-class-IMDB.html#3-651" title="Go to source code">class.imdb.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-IMDB.html#38-67" title="Go to source code">__construct</a>( <span>string <var>$imdb_site</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$imdb_site</var></dt>
+					<dd><code>string</code><br>IMDB website url as input and store the site data in $imdbSitedata</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieTitle" id="_getMovieTitle">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieTitle">#</a>
+		<code><a href="source-class-IMDB.html#71-79" title="Go to source code">getMovieTitle</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie title</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie title</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAKAMovieTitle" id="_getAKAMovieTitle">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAKAMovieTitle">#</a>
+		<code><a href="source-class-IMDB.html#83-91" title="Go to source code">getAKAMovieTitle</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get AKA Movie title</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get AKA Movie title</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieYear" id="_getMovieYear">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieYear">#</a>
+		<code><a href="source-class-IMDB.html#95-118" title="Go to source code">getMovieYear</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie year</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie year</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieRating" id="_getMovieRating">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieRating">#</a>
+		<code><a href="source-class-IMDB.html#122-130" title="Go to source code">getMovieRating</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie rating</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie rating</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieStoryline" id="_getMovieStoryline">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieStoryline">#</a>
+		<code><a href="source-class-IMDB.html#134-142" title="Go to source code">getMovieStoryline</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Storyline</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Storyline</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieDescription" id="_getMovieDescription">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieDescription">#</a>
+		<code><a href="source-class-IMDB.html#146-154" title="Go to source code">getMovieDescription</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Description</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Description</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieMPAARating" id="_getMovieMPAARating">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieMPAARating">#</a>
+		<code><a href="source-class-IMDB.html#158-166" title="Go to source code">getMovieMPAARating</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie MPAA Rating</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie MPAA Rating</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMoviePoster" id="_getMoviePoster">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMoviePoster">#</a>
+		<code><a href="source-class-IMDB.html#170-186" title="Go to source code">getMoviePoster</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie poster url big image can be accessed at index big small image can
+be accessed at index small</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie poster url big image can be accessed at index big small image can
+be accessed at index small</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieDirectorWithURL" id="_getMovieDirectorWithURL">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieDirectorWithURL">#</a>
+		<code><a href="source-class-IMDB.html#190-206" title="Go to source code">getMovieDirectorWithURL</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie director(s) with url</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie director(s) with url</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieDirector" id="_getMovieDirector">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieDirector">#</a>
+		<code><a href="source-class-IMDB.html#210-226" title="Go to source code">getMovieDirector</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie director(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie director(s)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieGenreWithURL" id="_getMovieGenreWithURL">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieGenreWithURL">#</a>
+		<code><a href="source-class-IMDB.html#230-238" title="Go to source code">getMovieGenreWithURL</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Genre(s) with url</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Genre(s) with url</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieGenre" id="_getMovieGenre">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieGenre">#</a>
+		<code><a href="source-class-IMDB.html#242-258" title="Go to source code">getMovieGenre</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Genre(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Genre(s)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieActorWithURL" id="_getMovieActorWithURL">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieActorWithURL">#</a>
+		<code><a href="source-class-IMDB.html#262-279" title="Go to source code">getMovieActorWithURL</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Actor(s) with URL Limited to 3 star actor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Actor(s) with URL Limited to 3 star actor</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieActor" id="_getMovieActor">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieActor">#</a>
+		<code><a href="source-class-IMDB.html#283-300" title="Go to source code">getMovieActor</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Actor(s) Limited to 3 star actor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Actor(s) Limited to 3 star actor</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieWriterURL" id="_getMovieWriterURL">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieWriterURL">#</a>
+		<code><a href="source-class-IMDB.html#304-313" title="Go to source code">getMovieWriterURL</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Write(s) URL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Write(s) URL</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieWriter" id="_getMovieWriter">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieWriter">#</a>
+		<code><a href="source-class-IMDB.html#317-330" title="Go to source code">getMovieWriter</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Write(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Write(s)</p>
+
+<p>TODO: Write url helper to return the name as string with their role. Right
+now this function return as href link Ex: Chazz Palminteri (play), Chazz
+Palminteri (screenplay) - A Bronx Tale</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieTagline" id="_getMovieTagline">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieTagline">#</a>
+		<code><a href="source-class-IMDB.html#334-342" title="Go to source code">getMovieTagline</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Tagline</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Tagline</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieSites" id="_getMovieSites">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieSites">#</a>
+		<code><a href="source-class-IMDB.html#346-366" title="Go to source code">getMovieSites</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Website(s) as href</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Website(s) as href</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieCountry" id="_getMovieCountry">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieCountry">#</a>
+		<code><a href="source-class-IMDB.html#370-391" title="Go to source code">getMovieCountry</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Country(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Country(s)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieLanguage" id="_getMovieLanguage">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieLanguage">#</a>
+		<code><a href="source-class-IMDB.html#395-416" title="Go to source code">getMovieLanguage</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Language(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Language(s)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieReleaseDate" id="_getMovieReleaseDate">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieReleaseDate">#</a>
+		<code><a href="source-class-IMDB.html#420-429" title="Go to source code">getMovieReleaseDate</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie release date</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie release date</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieFilmingLocation" id="_getMovieFilmingLocation">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieFilmingLocation">#</a>
+		<code><a href="source-class-IMDB.html#433-449" title="Go to source code">getMovieFilmingLocation</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Filming Location(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Filming Location(s)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieBudget" id="_getMovieBudget">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieBudget">#</a>
+		<code><a href="source-class-IMDB.html#453-462" title="Go to source code">getMovieBudget</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Budget</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Budget</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieOpeningWeekend" id="_getMovieOpeningWeekend">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieOpeningWeekend">#</a>
+		<code><a href="source-class-IMDB.html#466-475" title="Go to source code">getMovieOpeningWeekend</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Opening Weekend</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Opening Weekend</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieGross" id="_getMovieGross">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieGross">#</a>
+		<code><a href="source-class-IMDB.html#479-488" title="Go to source code">getMovieGross</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Gross</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Gross</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieRuntime" id="_getMovieRuntime">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieRuntime">#</a>
+		<code><a href="source-class-IMDB.html#492-504" title="Go to source code">getMovieRuntime</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Runtime</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Runtime</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieSoundMix" id="_getMovieSoundMix">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieSoundMix">#</a>
+		<code><a href="source-class-IMDB.html#508-520" title="Go to source code">getMovieSoundMix</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Sound Mix</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Sound Mix</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieColor" id="_getMovieColor">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieColor">#</a>
+		<code><a href="source-class-IMDB.html#524-536" title="Go to source code">getMovieColor</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Color</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Color</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMovieAspectRatio" id="_getMovieAspectRatio">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMovieAspectRatio">#</a>
+		<code><a href="source-class-IMDB.html#540-550" title="Go to source code">getMovieAspectRatio</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get Movie Aspect Ratio</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get Movie Aspect Ratio</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		PHP IMDB / IMDB.com information parser/scraper API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
